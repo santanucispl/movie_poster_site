@@ -1,0 +1,8 @@
+.cart_single_main {
+    box-shadow: 0px 0px 8px #7e7e7e;
+    border-radius: 6px;
+}
+
+.cart_single_main   img {
+    width: 20%;
+}

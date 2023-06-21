@@ -1,0 +1,43 @@
+
+.product_details_main {
+    margin-top: 40px;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;  
+}
+.btn-section > .btn > i {
+    margin: 8px;
+}
+
+
+.fig_img_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 2px solid #ebebeb;
+    background: #ebebeb;
+}
+
+.fig_img_section > img {
+    width: 50%;
+}
+
+.bd-main {
+
+}
+
+.bd-main > p {
+
+}
+
+.bd-main > p > span {
+    color: grey;
+}
+
+.quantity_div {
+    width: 40%;
+}
