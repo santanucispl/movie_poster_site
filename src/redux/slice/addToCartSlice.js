@@ -13,25 +13,34 @@ const addToCartSlice = createSlice({
     reducers : {
         addCart(state, action) {
             const index = state.cart.findIndex((item) => item.imdbID === action.payload.imdbID)
-            console.log(index)
-            if(index >= 0) {
-
-                  state.cart.map((data)=> {
-                    const newCartData = {...data, quantity: action.payload.quantity + 1 }
-                    console.log(newCartData)
-                    return newCartData;
+            const existingItem = state.cart[index];
+            let updatedItems;
+            if(existingItem) {
+                // let newCartData="";
+                //   state.cart.map((data)=> {
+                //     if(data.imdbID === action.payload.imdbID){
+                //          newCartData = {...data, quantity: action.payload.quantity + 1 }
+                //     console.log(newCartData)
+                //     }
+                    
+                //     return newCartData;
 
                    
 
-                })
+                // })
 
-               
+                const updatedItem = {
+                    ...existingItem,
+                    quantity: existingItem.quantity + 1,
+                  };
+                  updatedItems = [...state.cart];
+                  updatedItems[index] = updatedItem;
 
-
-                
+                  state.cart = updatedItems;
+                  console.log(existingItem.quantity)
                 
                 // state.cart[index].quantity += action.payload.quantity
-                // console.log(action.payload)
+                 console.log(updatedItems[index])
             }else{
                 state.cart.push(action.payload);
             }
